@@ -77,43 +77,51 @@ public class SKFontAwesomePickerView: UIView {
 
   override public func awakeFromNib() {
     super.awakeFromNib()
-    let bundle = Bundle(for: type(of: self))
-    fontAwesomePicker = (UIStoryboard(name: "SKFontAwesomePicker", bundle: bundle)
-      .instantiateViewController(withIdentifier: "SKFontAwesomePickerControllerID") as? SKFontAwesomePickerController)!
-    fontAwesomePicker.viewReference = self
-    fontAwesomePicker.view.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
-    addSubview(fontAwesomePicker.view)
-    let leading = NSLayoutConstraint(item: fontAwesomePicker.view,
-                       attribute: NSLayoutAttribute.leading,
-                       relatedBy: NSLayoutRelation.equal,
-                       toItem: self,
-                       attribute: NSLayoutAttribute.leading,
-                       multiplier: 1,
-                       constant: 0)
-    leading.isActive = true
-    let top = NSLayoutConstraint(item: fontAwesomePicker.view,
-                                     attribute: NSLayoutAttribute.top,
+    let podBundle = Bundle(for: self.classForCoder)
+    if let bundleURL = podBundle.url(forResource: "Controls", withExtension: "bundle") {
+      if let bundle = Bundle(url: bundleURL) {
+        fontAwesomePicker = (UIStoryboard(name: "SKFontAwesomePicker", bundle: bundle)
+          .instantiateViewController(withIdentifier: "SKFontAwesomePickerControllerID") as? SKFontAwesomePickerController)!
+        fontAwesomePicker.viewReference = self
+        fontAwesomePicker.view.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
+        addSubview(fontAwesomePicker.view)
+        applyFullScreenContraints(fontAwesomePicker.view)
+      }
+    }
+  }
+  
+  func applyFullScreenContraints(_ fontAwesomePickerView: UIView) {
+    let leading = NSLayoutConstraint(item: fontAwesomePickerView,
+                                     attribute: NSLayoutAttribute.leading,
                                      relatedBy: NSLayoutRelation.equal,
                                      toItem: self,
-                                     attribute: NSLayoutAttribute.top,
+                                     attribute: NSLayoutAttribute.leading,
                                      multiplier: 1,
                                      constant: 0)
-    top.isActive = true
-    let bottom = NSLayoutConstraint(item: fontAwesomePicker.view,
-                                 attribute: NSLayoutAttribute.bottom,
+    leading.isActive = true
+    let top = NSLayoutConstraint(item: fontAwesomePickerView,
+                                 attribute: NSLayoutAttribute.top,
                                  relatedBy: NSLayoutRelation.equal,
                                  toItem: self,
-                                 attribute: NSLayoutAttribute.bottom,
+                                 attribute: NSLayoutAttribute.top,
                                  multiplier: 1,
                                  constant: 0)
-    bottom.isActive = true
-    let trailing = NSLayoutConstraint(item: fontAwesomePicker.view,
-                                    attribute: NSLayoutAttribute.trailing,
+    top.isActive = true
+    let bottom = NSLayoutConstraint(item: fontAwesomePickerView,
+                                    attribute: NSLayoutAttribute.bottom,
                                     relatedBy: NSLayoutRelation.equal,
                                     toItem: self,
-                                    attribute: NSLayoutAttribute.trailing,
+                                    attribute: NSLayoutAttribute.bottom,
                                     multiplier: 1,
                                     constant: 0)
+    bottom.isActive = true
+    let trailing = NSLayoutConstraint(item: fontAwesomePickerView,
+                                      attribute: NSLayoutAttribute.trailing,
+                                      relatedBy: NSLayoutRelation.equal,
+                                      toItem: self,
+                                      attribute: NSLayoutAttribute.trailing,
+                                      multiplier: 1,
+                                      constant: 0)
     trailing.isActive = true
   }
 
