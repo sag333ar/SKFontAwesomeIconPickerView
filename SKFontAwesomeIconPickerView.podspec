@@ -84,7 +84,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { 
-  	:git => "http://EXAMPLE/SKFontAwesomeIconPickerView.git", 
+  	:git => "https://github.com/sag333ar/SKFontAwesomeIconPickerView.git", 
   	# :tag => "#{s.version}" 
   	:branch => "master"
   }
