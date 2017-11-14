@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   Hope that helps. Cheers.
                    DESC
 
-  s.homepage     = "http://sagarrkothari.com/"
+  s.homepage     = "http://sagarrkothari.com/2017/11/13/Using-FontAwesome-Icon-Picker/"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
