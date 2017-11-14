@@ -15,61 +15,81 @@ public class SKFontAwesomePickerView: UIView {
 
   @IBInspectable public var iconBorderSize: Int = 1 {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var iconBorderColor: UIColor = UIColor.black {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var iconColor: UIColor = UIColor.black {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var iconBorderRadius: Int = 10 {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var iconBackgroundColor: UIColor = UIColor.white {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var selectedIconBorderSize: Int = 1 {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var selectedIconBorderColor: UIColor = UIColor.gray {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var selectedIconColor: UIColor = UIColor.white {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var selectedIconBorderRadius: Int = 10 {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
 
   @IBInspectable public var selectedIconBackgroundColor: UIColor = UIColor.darkGray {
     didSet {
-      fontAwesomePicker.collectionView.reloadData()
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.collectionView.reloadData()
+      }
     }
   }
   

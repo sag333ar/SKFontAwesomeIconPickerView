@@ -100,8 +100,7 @@ Pod::Spec.new do |s|
   s.source_files = '*.{swift}'
   s.resource_bundles	=	{
   	'Controls' => [
-  		'*.{storyboard}',
-  		'*.{ttf}'
+  		'*.{storyboard}'
   	]
   }
 
