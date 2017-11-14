@@ -97,19 +97,14 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
-
-  s.subspec 'PickerView' do |sub|
-  	sub.source_files		=	'*.{swift}'
-	sub.resource_bundles	=	{
-		'Controls' => [
-			'*.{storyboard}',
-			'*.{ttf}'
-		]
-	}
-  end
-
+  s.source_files = '*.{swift}'
+  s.resource_bundles	=	{
+  	'Controls' => [
+  		'*.{storyboard}',
+  		'*.{ttf}'
+  	]
+  }
+ 
   # s.public_header_files = "Classes/**/*.h"
 
 
