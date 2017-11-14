@@ -99,12 +99,12 @@ Pod::Spec.new do |s|
 
   s.source_files = '*.{swift}'
   s.resource_bundles	=	{
-  	'SKFontAwesomeIconPickerView' => [
+  	'Controls' => [
   		'*.{storyboard}',
   		'*.{ttf}'
   	]
   }
- 
+
   # s.public_header_files = "Classes/**/*.h"
 
 
