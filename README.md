@@ -83,6 +83,8 @@ class ViewController: UIViewController {
 
 Hope that helps.
 
+If it does not, download sample project from [here](https://raw.githubusercontent.com/sag333ar/SKFontAwesomeIconPickerView/master/ReadmeAssets/SamplePickerView.zip) for more reference.
+
 ## Contribute
 
 We would love you for the contribution to **SKFontAwesomeIconPickerView**, check the ``LICENSE`` file for more info.
