@@ -17,7 +17,7 @@
         <!--Font Awesome Picker Controller-->
         <scene sceneID="WIc-2f-9CK">
             <objects>
-                <viewController storyboardIdentifier="SKFontAwesomePickerControllerID" automaticallyAdjustsScrollViewInsets="NO" id="yJv-dt-DCw" customClass="SKFontAwesomePickerController" customModule="SKFontAwesome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SKFontAwesomePickerControllerID" automaticallyAdjustsScrollViewInsets="NO" id="yJv-dt-DCw" customClass="SKFontAwesomePickerController" customModule="SKFontAwesomeIconPickerView" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LDu-0j-vPx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
