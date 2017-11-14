@@ -10,7 +10,7 @@ import UIKit
 
 public class SKFontAwesomePickerController: UIViewController {
 
-  private var selectedIndex = 0
+  public var selectedIndex = 0
   @IBOutlet var collectionView: UICollectionView!
   public var viewReference: SKFontAwesomePickerView!
 
