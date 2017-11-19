@@ -102,7 +102,19 @@ public class SKFontAwesomePickerView: UIView {
       }
     }
   }
-  
+
+  @IBInspectable public var selectedIndex: Int = 0 {
+    didSet {
+      if fontAwesomePicker != nil {
+        fontAwesomePicker.selectedIndex = selectedIndex
+        fontAwesomePicker.collectionView.reloadData()
+        fontAwesomePicker.collectionView.scrollToItem(at: IndexPath(row: selectedIndex, section: 0),
+                                                      at: .bottom,
+                                                      animated: true)
+      }
+    }
+  }
+
   public var didSelectClosure: ((String) -> Void)?
 
   override public func awakeFromNib() {
