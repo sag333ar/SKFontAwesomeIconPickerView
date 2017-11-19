@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class SKFontAwesomePickerView: UIView {
 
-  private var fontAwesomePicker: SKFontAwesomePickerController!
+  public var fontAwesomePicker: SKFontAwesomePickerController!
 
   @IBInspectable public var iconBorderSize: Int = 1 {
     didSet {
