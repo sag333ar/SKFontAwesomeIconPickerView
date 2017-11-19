@@ -92,6 +92,16 @@ public class SKFontAwesomePickerView: UIView {
       }
     }
   }
+
+  @IBInspectable public var pickerBackgroundColor: UIColor = UIColor.clear {
+    didSet {
+      if fontAwesomePicker != nil {
+        backgroundColor = UIColor.clear
+        fontAwesomePicker.view.backgroundColor = UIColor.clear
+        fontAwesomePicker.collectionView.backgroundColor = pickerBackgroundColor
+      }
+    }
+  }
   
   public var didSelectClosure: ((String) -> Void)?
 

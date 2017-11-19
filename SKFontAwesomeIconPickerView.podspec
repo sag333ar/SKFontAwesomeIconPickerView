@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SKFontAwesomeIconPickerView"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "An icon picker view which will show list of icons from Font Awesome."
 
   # This description is used to generate tags and improve search results.
