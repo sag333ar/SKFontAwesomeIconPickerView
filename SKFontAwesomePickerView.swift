@@ -107,10 +107,13 @@ public class SKFontAwesomePickerView: UIView {
     didSet {
       if fontAwesomePicker != nil {
         fontAwesomePicker.selectedIndex = selectedIndex
+        let indexPath = IndexPath(row: fontAwesomePicker.selectedIndex, section: 0)
         fontAwesomePicker.collectionView.reloadData()
-        fontAwesomePicker.collectionView.scrollToItem(at: IndexPath(row: selectedIndex, section: 0),
-                                                      at: .bottom,
-                                                      animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+          self.fontAwesomePicker.collectionView.scrollToItem(at: indexPath,
+                                                        at: .top,
+                                                        animated: true)
+        }
       }
     }
   }
